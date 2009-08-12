@@ -1,18 +1,18 @@
 ## Submenu
 
-This extension adds a useful submenu to the main radiant admin navigation. It is intended for use by extension authors and works much like the tabs that make up the first level navigation. I use it to group together the various other extensions that are relevant to readers (rather than creating a tab for each one) and to offer a better site-chooser in multi_site.
+This extension adds a useful second layer of navigation to the main radiant admin interface. It's meant for use by extension authors and works much like the tabs. I (will) use it to group together the various other extensions that are relevant to readers (rather than creating a tab for each one) and to offer a better site-chooser in multi_site.
 
 ## Status
 
-New. Nearly ready. Well-tested. Not yet styled in.
+New. Nearly ready. Properly tested. Not yet styled in.
 
 (I haven't sorted out the presentation yet but the principle works)
 
 ## Installation
 
-No migrations or updates involved:
+No migrations or updates:
 
-	git submodule add git://github.com/spanner/radiant-reader-extension.git vendor/extensions/reader
+	git submodule add git://github.com/spanner/radiant-submenu-extension.git vendor/extensions/reader
 
 ## Usage
 
