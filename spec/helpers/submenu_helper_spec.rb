@@ -5,7 +5,7 @@ describe "ApplicationHelper" do
   dataset :users
   
   it "should include Admin::SubMenuHelper" do
-    ApplicationHelper.included_modules.should include(Admin::SubMenuHelper)
+    ApplicationHelper.included_modules.should include(Admin::SubmenuHelper)
   end
   
   it "should respond to links_for_navigation" do

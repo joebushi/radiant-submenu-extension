@@ -9,8 +9,8 @@ class SubmenuExtension < Radiant::Extension
   def activate
 
     Radiant::AdminUI::Tab.send :include, Admin::TabExtensions
-    Radiant::AdminUI.send :include, Admin::SubMenu
-    ApplicationHelper.send :include, Admin::SubMenuHelper
+    Radiant::AdminUI.send :include, Admin::Submenu
+    ApplicationHelper.send :include, Admin::SubmenuHelper
     
     # just while I'm testing. you wouldn't really bother.
     admin.tabs['Layouts'].add_link('list', '/admin/layouts')

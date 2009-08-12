@@ -44,13 +44,13 @@ describe Radiant::AdminUI::Tab do
     end
     
     it "should have no submenu links" do
-      @admin.tabs['Layouts'].has_submenu?.should be_false
+      @admin.tabs['Snippets'].has_submenu?.should be_false
     end
     
     it "should be able to add a submenu item" do
-      @admin.tabs['Layouts'].add_link('sna', 'foo')
-      @admin.tabs['Layouts'].has_submenu?.should be_true
-      @admin.tabs['Layouts'].submenu['sna'].url.should == 'foo'
+      @admin.tabs['Snippets'].add_link('sna', 'foo')
+      @admin.tabs['Snippets'].has_submenu?.should be_true
+      @admin.tabs['Snippets'].submenu['sna'].url.should == 'foo'
     end
   end
 end

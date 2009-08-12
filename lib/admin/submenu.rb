@@ -1,4 +1,4 @@
-module Admin::SubMenu
+module Admin::Submenu
   
   class DuplicateLinkNameError < StandardError; end
 

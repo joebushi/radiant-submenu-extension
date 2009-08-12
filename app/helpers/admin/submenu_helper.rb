@@ -1,4 +1,4 @@
-module Admin::SubMenuHelper
+module Admin::SubmenuHelper
 
   def self.included(base)
     base.class_eval do
