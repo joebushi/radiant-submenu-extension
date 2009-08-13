@@ -4,15 +4,21 @@ This extension adds a useful second layer of navigation to the main radiant admi
 
 ## Status
 
-New. Nearly ready. Properly tested. Not yet styled in.
-
-(I haven't sorted out the presentation yet but the principle works)
+New but simple and properly tested. Should just work.
 
 ## Installation
 
-No migrations or updates:
-
 	git submodule add git://github.com/spanner/radiant-submenu-extension.git vendor/extensions/reader
+
+No migrations. One stylesheet to bring across:
+
+	rake radiant:extensions:submenu:update
+
+## Configuration
+
+Nothing is required. You will need to make sure this extension loads before any that make use of it, but probably after multi_site. This is what I have at the moment:
+
+	config.extensions = [  :share_layouts, :multi_site, :submenu, :taggable, :reader, :all ]
 
 ## Usage
 
@@ -21,8 +27,6 @@ In the activation method of an extension:
 	admin.tabs.add('Extension')
 	admin.tabs['Extension'].add_link('something', '/somewhere')
 	admin.tabs['Extension'].add_link('some other thing', '/elsewhere')
-    
-There is no provision at the moment for anything other than links.
 
 ## Author and copyright
 

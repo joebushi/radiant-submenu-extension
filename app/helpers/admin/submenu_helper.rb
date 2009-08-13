@@ -15,8 +15,10 @@ module Admin::SubmenuHelper
           current_tab.submenu.each do |link| 
             links << nav_link_to(link.name, File.join(ActionController::Base.relative_url_root || '', link.url))
           end
+          %{<div id="submenu"><div>#{links.join(separator)}</div></div>}
+        else
+          %{<div id="submenu" class="empty"></div>}
         end
-        %{<div id="submenu">#{links.join(separator)}</div>}
       end
 
     end
