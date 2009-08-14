@@ -1,6 +1,6 @@
 #navigation #submenu {
   position: absolute;
-  top: 70px;
+  top: 88px;
   left: 0;
   width: 100%;
   background-color: #EAE3C5;
@@ -20,7 +20,7 @@
 
 #navigation #submenu a, #navigation #submenu a:visited {
   position: relative;
-  background-color:transparent;
+  background: transparent;
   color: #7d796c;
   display:inline;
   margin: 5px;
@@ -28,28 +28,35 @@
   outline-width: 0;
   padding: 0;
   font-size: 0.9em;
-}
-
-#navigation #submenu strong a, #navigation #submenu strong a:visited, #navigation #submenu a:hover {
-  color: black;
   font-weight: normal;
 }
 
-#navigation a, #navigation a:visited {
-  opacity: 0.8;
-  color: #5e443a;
+#navigation #submenu a:hover {
+  color: black;
 }
 
 #navigation strong a, #navigation strong a:visited {
   background-color: #EAE3C5;
-  opacity: 1;
+  background-image: none;
   color: black;
+  padding-top: 8px;
+  margin-top: 0;
+  font-size: 100%;
+}
+
+#navigation a, #navigation a:visited {
+  background:transparent url(/images/admin/bgtab.png) repeat-x bottom left;
+  color: #7d796c;
+  margin-top: 2px;
+  padding-top: 6px;
+  font-size: 85%;
+  margin-right: 1px;
 }
 
 #navigation a.fg, #navigation a.fg:visited {
-  opacity: 1;
+
 }
 
 #content {
-  margin-top: 10px;
+  margin-top: 24px;
 }
