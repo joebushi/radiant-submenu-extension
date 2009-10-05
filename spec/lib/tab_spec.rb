@@ -1,8 +1,8 @@
 require File.dirname(__FILE__) + "/../spec_helper"
 
 describe Radiant::AdminUI::Tab do
-  it "should include Admin::TabExtensions" do
-    Radiant::AdminUI::Tab.included_modules.should include(Admin::TabExtensions)
+  it "should include TabExtensions" do
+    Radiant::AdminUI::Tab.included_modules.should include(TabExtensions)
   end
   
   describe "instantiated" do

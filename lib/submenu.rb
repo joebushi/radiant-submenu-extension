@@ -1,8 +1,6 @@
-module Admin::Submenu
+module Submenu
   
   class DuplicateLinkNameError < StandardError; end
-
-  # this will look very familiar
 
   class Submenu
     def initialize

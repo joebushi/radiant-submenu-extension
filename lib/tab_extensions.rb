@@ -1,4 +1,4 @@
-module Admin::TabExtensions
+module TabExtensions
 
   def submenu
     @submenu ||= Radiant::AdminUI::Submenu.new

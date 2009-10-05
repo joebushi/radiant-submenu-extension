@@ -6,12 +6,22 @@ class SubmenuExtension < Radiant::Extension
   description "Adds handy submenus to tabs in the radiant admin navigation"
   url "http://spanner.org/radiant/submenu"
   
-  def activate
+  define_routes do |map|
+    map.namespace :admin do |admin|
+      admin.resources :submenu_links
+    end
+  end
 
-    Radiant::AdminUI::Tab.send :include, Admin::TabExtensions
-    Radiant::AdminUI.send :include, Admin::Submenu
+  def activate
+    Radiant::AdminUI::Tab.send :include, TabExtensions
+    Radiant::AdminUI.send :include, Submenu
     ApplicationHelper.send :include, Admin::SubmenuHelper
-    Admin::ResourceController.send :include, Admin::ResourceControllerExtensions
+    ApplicationController.send :include, ResourceControllerExtensions
+
+    unless defined? admin.submenu_links
+      Radiant::AdminUI.send :include, SubmenuAdminUI
+      admin.submenu_link = Radiant::AdminUI.load_default_submenu_link_regions
+    end
 
   end
   

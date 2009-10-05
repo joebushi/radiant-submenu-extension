@@ -2,7 +2,7 @@ require File.dirname(__FILE__) + "/../spec_helper"
 
 describe "ApplicationHelper" do
   include ApplicationHelper
-  dataset :users
+  dataset :users, :submenu_links
   
   it "should include Admin::SubMenuHelper" do
     ApplicationHelper.included_modules.should include(Admin::SubmenuHelper)
@@ -41,6 +41,17 @@ describe "ApplicationHelper" do
       links_for_navigation.should =~ /gracious/
       links_for_navigation.should =~ /fish/
     end
+    
+    it "should include the right set of sublinks" do
+      links_for_navigation.should =~ /<div id="submenu_links">/
+    end
+    
+    it "should include the right set of sublinks" do
+      links_for_navigation.should =~ /href="#{submenu_links(:news).url}"/
+      links_for_navigation.should =~ /href="#{submenu_links(:assets).url}"/
+      links_for_navigation.should_not =~ /href="#{submenu_links(:personal).url}"/
+    end
+    
   end
 
 end

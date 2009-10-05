@@ -1,8 +1,8 @@
 require File.dirname(__FILE__) + "/../spec_helper"
 
 describe Radiant::AdminUI do
-  it "should include Admin::SubMenu" do
-    Radiant::AdminUI.included_modules.should include(Admin::Submenu)
+  it "should include SubMenu" do
+    Radiant::AdminUI.included_modules.should include(Submenu)
   end
 end
 

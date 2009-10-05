@@ -1,4 +1,4 @@
-module Admin::ResourceControllerExtensions
+module ResourceControllerExtensions
   
   def self.included(base)
     base.class_eval {
